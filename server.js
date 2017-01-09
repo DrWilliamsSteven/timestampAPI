@@ -5,6 +5,7 @@ var url = require("url");
 var path = require("path");
 
 var app = express();
+var port = process.env.PORT || 8080
 
 var timeStamp;
 var result;
@@ -55,6 +56,6 @@ app.use(function(request, response) {
   response.end(JSON.stringify(result));
 });
 
- http.createServer(app).listen(3000);
+ http.createServer(app).listen(port);
 
 
